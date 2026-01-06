@@ -1,0 +1,25 @@
+colorScheme = "slate"
+autoSwitchAppearance = true
+enableSearch = true
+enableCodeCopy = true
+
+[homepage]
+  layout = "custom"
+  showRecent = true
+
+[header]
+  layout = "hybrid"
+
+[article]
+  showBreadcrumbs = false
+  showReadingTime = true
+  showTaxonomies = false
+  showTableOfContents = true
+  showHeadingAnchors = false
+
+[list]
+  groupByYear = true
+
+[footer]
+  showThemeAttribution = true
+  showAppearanceSwitcher = true

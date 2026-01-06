@@ -1,0 +1,33 @@
+# config/_default/menus.en.toml
+
+# [[main]]
+#   name = "About"
+#   pageRef = "about"
+#   weight = 10
+
+[[main]]
+  name = "Posts"
+  pageRef = "posts"
+  weight = 10
+
+[[main]]
+  identifier = "search"
+  weight = 99
+  [main.params]
+    action = "search"
+    icon = "search"
+
+[[footer]]
+  name = "Topics"
+  pageRef = "topics"
+  weight = 10
+
+[[footer]]
+  name = "Tags"
+  pageRef = "tags"
+  weight = 10
+
+[[footer]]
+  name = "RSS"
+  url = "/index.xml"
+  weight = 90

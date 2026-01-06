@@ -1,0 +1,65 @@
+{{/* Custom home partial - centered profile page */}}
+<div class="flex flex-col items-center justify-center px-6 mx-auto container pt-20 sm:pt-0 sm:h-screen sm:pb-40">
+
+  {{/* Profile, Title and Subtitle */}}
+  <div class="flex flex-col items-center justify-center text-center max-w-lg mb-10">
+    <div class="flex flex-col w-32 mb-4 relative">
+      <img src="/images/profile.png" width="200px" height="200px" class="rounded-full w-32 h-32 object-cover" alt="Profile">
+      <div class="hidden absolute sm:block left-full top-1/2 -translate-x-[40px] ml-4">
+        <div class="relative bg-[#FFF] rounded-3xl px-4 py-2 shadow-lg border border-neutral-200 whitespace-nowrap">
+          <p class="flex flex-row items-center justify-center gap-1 text-sm font-medium text-neutral-900">
+            CTO at
+            <a href="https://zapnito.com" target="_blank" class="text-primary-500 hover:underline">
+              @zapnito
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col">
+      <h1 class="text-3xl md:text-4xl font-bold">Karl Freeman</h1>
+      <p class="text-lg text-neutral-400 max-w-lg mt-2 leading-6">
+        Building Products, Scaling Companies, Supporting Teams
+      </p>
+      <p class="text-sm text-neutral-500 max-w-lg mt-3 leading-5">
+        London-based CTO specializing in Ruby on Rails. I build products people want to use and lead teams that ship, taking products from concept to scale.
+      </p>
+      <div class="flex flex-row justify-center items-center gap-4 mt-4">
+        <a href="https://github.com/karlfreeman" target="_blank" rel="noopener noreferrer" class="transition-all duration-200 hover:scale-110 hover:text-primary-400 text-neutral-400">
+          {{ partial "icon.html" "github" }}
+        </a>
+        <a href="https://linkedin.com/in/karlfreeman" target="_blank" rel="noopener noreferrer" class="transition-all duration-200 hover:scale-110 hover:text-primary-400 text-neutral-400">
+          {{ partial "icon.html" "linkedin" }}
+        </a>
+        <a href="https://twitter.com/karlfreeman" target="_blank" rel="noopener noreferrer" class="transition-all duration-200 hover:scale-110 hover:text-primary-400 text-neutral-400">
+          {{ partial "icon.html" "twitter" }}
+        </a>
+        <a href="mailto:karl@karlfreeman.com" class="transition-all duration-200 hover:scale-110 hover:text-primary-400 text-neutral-400">
+          {{ partial "icon.html" "email" }}
+        </a>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="flex flex-col w-full max-w-2xl">
+    <div class="w-full">
+      <div class="text-1xl font-semibold">
+        Recent Posts
+      </div>
+
+      {{ range first .Site.Params.homepage.recentLimit (.Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) .Site.Params.homepage.recentLimit).Pages }}
+        {{ partial "article-link.html" . }}
+      {{ end }}
+
+      <div class="pt-6">
+        <a href="/posts/" class="transition-all duration-200 hover:scale-110 hover:text-primary-400 text-neutral-400 text-sm font-medium">
+          See all posts →
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>

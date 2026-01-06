@@ -1,0 +1,10 @@
+languageCode = "en"
+languageName = "English"
+languageDirection = "ltr"
+weight = 1
+title = "Karl Freeman"
+
+[params.author]
+name = "Karl Freeman"
+image = "/images/profile.png"
+bio = "London-based CTO specializing in Ruby on Rails. I build products people want to use and lead teams that ship, taking products from concept to scale."
