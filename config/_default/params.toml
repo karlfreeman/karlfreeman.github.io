@@ -1,6 +1,5 @@
 colorScheme = "slate"
 autoSwitchAppearance = true
-enableSearch = true
 enableCodeCopy = true
 
 [homepage]
