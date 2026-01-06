@@ -1,2 +1,5 @@
 baseURL = "https://karlfreeman.github.io/"
 theme = "congo"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
